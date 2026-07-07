@@ -20,55 +20,108 @@
   /* =====================================================================
      DATA
      ===================================================================== */
+  const GH = "https://github.com/riyanshikedia10";
   const projects = [
-    { name: "Project ORBIT", badge: ["agentic ai", "green"], sub: "Agentic PE Intelligence · Dec 2024",
+    { name: "Project ORBIT", badge: ["agentic ai", "green"], sub: "Agentic PE Intelligence · Python, FastAPI, MCP",
       tags: ["FastAPI", "GPT-4o", "MCP", "Airflow", "Pinecone", "GCP"],
       body: [
         "Production-ready agentic AI platform automating private-equity intelligence for 50 Forbes AI companies — 5,000+ docs/month at 95% extraction accuracy.",
         "Multi-agent supervisory workflow via Model Context Protocol (8 tools) using a ReAct thought→action→observation loop for transparent decisions.",
         "Dual-pipeline architecture (Pydantic + RAG/Pinecone) generating standardized 8-section PE dashboards at 94% factual accuracy.",
         "3 Airflow DAGs orchestrating 50GB+ ETL; CI/CD with 80+ pytest tests deploying to GCP Cloud Run at 99.9% uptime.",
-      ], link: "#" },
-    { name: "Project Meridian", badge: ["multi-agent", "blue"], sub: "Multi-Agent Trading AI · Sept 2024",
+      ], link: GH + "/project_orbit" },
+    { name: "Project Meridian", badge: ["multi-agent", "blue"], sub: "Multi-Agent Trading AI · Next.js, GPT-4",
       tags: ["Next.js", "FastAPI", "GPT-4", "PostgreSQL", "GCP"],
       body: [
         "Scalable multi-agent system: 8 specialized GPT-4 agents collaborating through a 5-phase pipeline to produce fully-reasoned trade recommendations.",
         "Adversarial 3-round debate between bull/bear researchers cut single-model bias and hallucination by 40%.",
         "Real-time ETL from 4+ APIs (market, financials, news, sentiment) processing 10,000+ articles daily via Airflow.",
         "Interactive Next.js dashboard streaming the full reasoning chain, debate transcripts, and confidence scores.",
-      ], link: "#" },
-    { name: "Project Aurelia", badge: ["rag", "yellow"], sub: "Production RAG System · Mar 2025",
+      ], link: GH + "/project-meridian" },
+    { name: "Project Aurelia", badge: ["rag", "yellow"], sub: "Production RAG microservice",
       tags: ["FastAPI", "Streamlit", "Pinecone", "Docker", "Nginx"],
       body: [
         "Production-grade Retrieval-Augmented Generation system with 4 search strategies (vector, hybrid, cross-encoder rerank, RRF) at 85%+ relevance.",
+        "Auto-generates standardized financial concept notes from the Financial Toolbox User's Guide, with a Wikipedia fallback for uncovered topics.",
         "Dual-parser ingestion (Docling + PyMuPDF), 6 chunking strategies, and text-embedding-3-large (3072-dim) stored in Pinecone.",
-        "Intelligent query routing, PII filtering (SSN/CC), and Wikipedia fallback for general knowledge.",
         "1.5–4s streaming responses behind an Nginx reverse proxy; containerized with Docker Compose.",
-      ], link: "#" },
-    { name: "TradeTransition", badge: ["mlops", "green"], sub: "Forecasting & MLOps · Mar 2025",
+      ], link: GH + "/project-aurelia" },
+    { name: "TradeTransition", badge: ["mlops", "green"], sub: "Forecasting & MLOps",
       tags: ["Scikit-learn", "Flask", "Docker", "Nginx"],
       body: [
         "End-to-end trade-forecasting & MLOps system over 2.5M+ U.S. import records (25GB) across 5 sectors.",
         "Ensemble models (Random Forest, Gradient Boosting, XGBoost) at 85% accuracy with 25+ engineered features.",
         "Flask REST API (8 endpoints, 1,000+ req/hr) behind Nginx with load balancing at 99.9% uptime.",
         "Automated monitoring of 12 metrics, Kolmogorov-Smirnov drift detection, and weekly retraining triggers.",
-      ], link: "#" },
-    { name: "DeepLip", badge: ["deep learning", "blue"], sub: "Audio-Visual Lip Reading · Dec 2024",
+      ], link: GH + "/TradeTransition" },
+    { name: "DeepLip", badge: ["deep learning", "blue"], sub: "Audio-Visual Lip Reading",
       tags: ["PyTorch", "CNN", "LSTM", "OpenCV"],
       body: [
         "Multimodal deep-learning system transcribing speech from synchronized lip motion + audio via dual-pathway CNN with late fusion.",
         "90%+ transcription accuracy on LRS2/LRS3 with a sequence-to-sequence attention decoder.",
         "3D-CNN + bidirectional LSTM for spatiotemporal lip features; trained on 15 datasets (100+ hrs) with CTC loss.",
         "Achieved a 12% WER improvement over baseline visual-only models (45% → 33%).",
-      ], link: "#" },
-    { name: "PDF Parser", badge: ["nlp", "yellow"], sub: "Financial Doc Extraction · Jan 2025",
+      ], link: GH + "/DeepLip" },
+    { name: "PDF Parser", badge: ["nlp", "yellow"], sub: "Financial Doc Extraction",
       tags: ["Python", "OCR", "NLP", "DVC", "AWS S3"],
       body: [
-        "Multi-engine PDF parsing (pdfplumber, Tesseract OCR, Camelot, LayoutLMv3, Google Document AI) over 10,000+ SEC filings.",
+        "Multi-engine PDF parser for complex financial documents (pdfplumber, Tesseract OCR, Camelot, LayoutLMv3, Google Document AI) over 10,000+ SEC filings.",
         "94% extraction accuracy across 10-K/10-Q/8-K via confidence scoring and cascading fallback selection.",
         "Human-in-the-loop review for low-confidence extractions cut manual data entry by 85%.",
         "DVC pipeline versioning 50GB+ of documents with S3 sync for a 3-person team.",
-      ], link: "#" },
+      ], link: GH + "/pdf-parser" },
+    { name: "Investment Report Extractor", badge: ["data pipeline", "orange"], sub: "Automated crawler + Airflow",
+      tags: ["Scrapy", "Selenium", "BeautifulSoup", "Airflow"],
+      body: [
+        "Crawler extracting documents and market data from 15+ financial sites (SEC Edgar, Bloomberg, Reuters) — 5,000+ docs/month.",
+        "Airflow orchestration with 12 DAGs, exponential-backoff retry logic, and dependency management.",
+        "Multi-threaded scraping (Scrapy 100+ pages/min, BeautifulSoup, Selenium for JS content) with rotating proxies and throttling.",
+        "95% extraction success across 5,000+ monthly documents — cut manual collection time 90% (40 hrs → 4 hrs).",
+      ], link: GH + "/investment-report-extractor" },
+    { name: "SmartPortfolio AI", badge: ["ml", "green"], sub: "Stock selection & return prediction",
+      tags: ["Scikit-learn", "Prophet", "yFinance", "PostgreSQL"],
+      body: [
+        "AI investment platform screening 500+ S&P 500 equities using ML regression (Random Forest, XGBoost, LSTM) and Prophet forecasting.",
+        "Filters on 15+ criteria (P/E, revenue growth, margins, beta, dividend yield, momentum) via an automated yFinance/Alpha Vantage ETL pipeline.",
+        "Return-prediction engine improving forecast accuracy 15% over buy-and-hold using 20+ technical indicators and GridSearchCV tuning.",
+        "Markowitz mean-variance optimization + Monte Carlo (10,000+ iterations) achieving an 18% improved Sharpe ratio (1.8 vs 1.2).",
+      ], link: GH + "/smartportfolio" },
+    { name: "HRGraph", badge: ["research", "blue"], sub: "KaLLM workshop @ ACL 2024",
+      tags: ["LLMs", "Knowledge Graphs", "NLP"],
+      body: [
+        "Code and data for HRGraph, accepted to the KaLLM workshop at ACL 2024.",
+        "Research on knowledge-graph construction with large language models.",
+      ], link: GH + "/HRGraph" },
+    { name: "Python MCP Demo", badge: ["mcp", "yellow"], sub: "Model Context Protocol demo",
+      tags: ["Python", "MCP"],
+      body: [
+        "A hands-on demo of the Model Context Protocol (MCP) in Python — building tools, resources, and prompts an LLM can call.",
+      ], link: GH + "/python-mcp-demo" },
+    { name: "Prismiq", badge: ["python", "orange"], sub: "Python project",
+      tags: ["Python"],
+      body: [
+        "A Python project. Add a description on GitHub and I'll pull it in automatically.",
+      ], link: GH + "/Prismiq" },
+    { name: "DataBI", badge: ["analytics", "green"], sub: "BI & data-analysis notebooks",
+      tags: ["Jupyter", "Pandas", "Power BI"],
+      body: [
+        "Business-intelligence analysis and data exploration in Jupyter notebooks.",
+      ], link: GH + "/DataBI" },
+    { name: "Food Inspection DataBI", badge: ["analytics", "blue"], sub: "Food-inspection BI analysis",
+      tags: ["Jupyter", "Pandas"],
+      body: [
+        "Business-intelligence analysis of food-inspection datasets in Jupyter notebooks.",
+      ], link: GH + "/Food_Inspection_DataBI" },
+    { name: "DMDD — Group 1", badge: ["database", "yellow"], sub: "Data Modeling & Database Design",
+      tags: ["JavaScript", "SQL"],
+      body: [
+        "Data Modeling & Database Design course group project.",
+      ], link: GH + "/DMDD_Group-1" },
+    { name: "Group Lab · Team 11", badge: ["coursework", "orange"], sub: "Java team lab",
+      tags: ["Java"],
+      body: [
+        "Java team lab project.",
+      ], link: GH + "/Group_Lab_1_Team_11" },
   ];
 
   const education = [
@@ -197,10 +250,10 @@
             <p class="cta__sub">Looking for an internship or new-grad role, or have a project in mind? I read everything and reply to almost all of it.</p>
             <div class="cta__actions">
               <a href="mailto:riyanshibnkedia@gmail.com" class="btn btn--dark">riyanshibnkedia@gmail.com</a>
-              <a href="Riyanshi_Kedia_Resume.pdf" class="btn btn--ghost btn--ghost-onDark" target="_blank" rel="noopener">Download CV</a>
+              <a href="https://github.com/riyanshikedia10" class="btn btn--ghost btn--ghost-onDark" target="_blank" rel="noopener">View GitHub →</a>
             </div>
             <div class="cta__socials">
-              <a href="https://github.com/riyanshikedia" target="_blank" rel="noopener">GitHub</a><span>·</span>
+              <a href="https://github.com/riyanshikedia10" target="_blank" rel="noopener">GitHub</a><span>·</span>
               <a href="https://linkedin.com/in/riyanshikedia" target="_blank" rel="noopener">LinkedIn</a><span>·</span>
               <a href="mailto:riyanshibnkedia@gmail.com">Email</a><span>·</span>
               <a href="tel:+16173960802">Call</a>
