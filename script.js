@@ -180,7 +180,7 @@
       <p class="detail__sub">${item.sub}</p>
       ${tagsHTML(item.tags)}
       <ul class="detail__list">${item.body.map((p) => `<li>${p}</li>`).join("")}</ul>
-      ${withLink && item.link ? `<a href="${item.link}" class="link-arrow">View code →</a>` : ""}`;
+      ${withLink && item.link ? `<a href="${item.link}" class="link-arrow" target="_blank" rel="noopener">View code on GitHub →</a>` : ""}`;
   }
 
   function explorerApp(items, withLink) {
