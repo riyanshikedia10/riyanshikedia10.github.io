@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Riyanshi Kedia — Data Scientist &amp; AI Engineer</title>
+  <meta name="description" content="Portfolio of Riyanshi Kedia — data scientist and AI engineer building agentic AI, RAG, and ML systems. MS Information Systems @ Northeastern." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Source+Code+Pro:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="desktop">
+
+  <!-- ================= OS MENU BAR ================= -->
+  <div class="menubar">
+    <button class="menubar__logo" data-open="home">◆ riyanshi.dev</button>
+    <nav class="menubar__nav" aria-label="Primary">
+      <button data-open="projects">Work</button>
+      <button data-open="education">Education</button>
+      <button data-open="experience">Experience</button>
+      <button data-open="skills">Skills</button>
+      <button data-open="contact">Contact</button>
+    </nav>
+    <div class="menubar__actions">
+      <button id="themeToggle" class="icon-btn" aria-label="Toggle color theme" title="Toggle theme"><span class="theme-icon">◐</span></button>
+      <button class="btn btn--primary btn--sm" data-open="contact">Let's talk</button>
+    </div>
+  </div>
+
+  <!-- ================= DESKTOP ICONS — LEFT ================= -->
+  <aside class="dock dock--left" aria-label="Apps">
+    <button class="desk-icon" data-open="home"><span class="file-glyph file-glyph--orange"></span><span>home.mdx</span></button>
+    <button class="desk-icon" data-open="projects"><span class="file-glyph file-glyph--green folder"></span><span>projects/</span></button>
+    <button class="desk-icon" data-open="education"><span class="file-glyph file-glyph--blue folder"></span><span>education/</span></button>
+    <button class="desk-icon" data-open="experience"><span class="file-glyph file-glyph--yellow"></span><span>experience.log</span></button>
+    <button class="desk-icon" data-open="skills"><span class="app-glyph app-glyph--galaxy">✦</span><span>skills.viz</span></button>
+  </aside>
+
+  <!-- ================= DESKTOP ICONS — RIGHT ================= -->
+  <aside class="dock dock--right" aria-label="Links">
+    <button class="desk-icon" data-open="contact"><span class="file-glyph file-glyph--red"></span><span>contact.sh</span></button>
+    <a href="Riyanshi_Kedia_Resume.pdf" target="_blank" rel="noopener" class="desk-icon"><span class="app-glyph app-glyph--muted">⤓</span><span>resume.pdf</span></a>
+    <a href="https://github.com/riyanshikedia" target="_blank" rel="noopener" class="desk-icon"><span class="app-glyph app-glyph--dark">GH</span><span>GitHub</span></a>
+    <a href="https://linkedin.com/in/riyanshikedia" target="_blank" rel="noopener" class="desk-icon"><span class="app-glyph app-glyph--blue">in</span><span>LinkedIn</span></a>
+  </aside>
+
+  <!-- Windows are injected here by script.js -->
+
+  <!-- ================= TASKBAR (bottom dock) ================= -->
+  <div class="taskbar" id="taskbar" aria-label="Open windows"></div>
+
+  <!-- tiny desktop hint -->
+  <p class="desk-hint" id="deskHint">Tip: click the icons to open windows — drag their title bars, and close them with ✕.</p>
+
+  <script src="script.js"></script>
+</body>
+</html>
